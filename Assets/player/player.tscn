@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://c3in8uta8xsie"]
 
-[ext_resource path="res://Assets/player/bob.png" type="Texture2D" id=1]
-[ext_resource path="res://Assets/player/player.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://cior000muhl" path="res://Assets/player/bob.png" id="1"]
+[ext_resource type="Script" path="res://Assets/player/player.gd" id="2"]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id="1"]
 radius = 11.0
-height = 44.0
+height = 62.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 2 )
-shape = SubResource( 1 )
+position = Vector2(0, 1)
+shape = SubResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")

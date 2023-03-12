@@ -1,10 +1,10 @@
 2a60927148abd1d33b818b535e306557
-::res://::1678594921
-default_env.tres::Environment::-1::1678594821::0::1::::<><>::
-Demo1.tscn::PackedScene::-1::1678594821::0::1::::<><>::res://Assets/tilemaps/GrassyHills.tscn<>res://Assets/player/player.tscn
+::res://::1678641958
+default_env.tres::Environment::2435807741252535621::1678641759::0::1::::<><>::
+Demo1.tscn::PackedScene::6935966214230289721::1678641759::0::1::::<><>::res://Assets/tilemaps/GrassyHills.tscn<>res://Assets/player/player.tscn
 icon.png::CompressedTexture2D::5929860400371498510::1641873635::1678594837::1::::<><>::
 README.md::TextFile::-1::1642132815::0::1::::<><>::
-::res://Assets/::1678595026
+::res://Assets/::1678595031
 ::res://Assets/audio/::1678594921
 ::res://Assets/audio/music/::1678594921
 bonus level.ogg::AudioStreamOggVorbis::5191138979857984123::1678594911::1678594921::1::::<><>::
@@ -14,7 +14,8 @@ level2.ogg::AudioStreamOggVorbis::1599835443543425930::1678594911::1678594921::1
 level3?.ogg::AudioStreamOggVorbis::1045853864984773174::1678594911::1678594921::1::::<><>::
 ::res://Assets/audio/sfx/::1678594875
 Pickup Coin.ogg::AudioStreamOggVorbis::5432656498497188750::1678594874::1678594875::1::::<><>::
-::res://Assets/Global Scripts/::1678595026
+::res://Assets/global scripts/::1678641638
+Audio.gd::GDScript::-1::1678641638::0::1::::<>Node<>::
 ::res://Assets/player/::1678594837
 bob.png::CompressedTexture2D::4640425251771673::1642134347::1678594837::1::::<><>::
 player.gd::GDScript::-1::1678594821::0::1::::<>CharacterBody2D<>::
