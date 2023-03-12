@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjnvb88o38fyc"
+path="res://.godot/imported/Pickup Coin.ogg-7aab8321d3964cb85cf65000124ccfec.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/sfx/Pickup Coin.ogg"
+dest_files=["res://.godot/imported/Pickup Coin.ogg-7aab8321d3964cb85cf65000124ccfec.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

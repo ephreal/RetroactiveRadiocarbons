@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cf7vkhplv5lwd"
+path="res://.godot/imported/bonus level.ogg-c18a818567bedac4e8efb00749f4633c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/audio/music/bonus level.ogg"
+dest_files=["res://.godot/imported/bonus level.ogg-c18a818567bedac4e8efb00749f4633c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
