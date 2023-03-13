@@ -13,10 +13,11 @@ func load_player_data(path: String):
 	# Currently just places data into the powers
 	
 	self.powers['ceiling_grip'] = false
+	self.powers['double_jump'] = false
 
 # Powerup changes
-func add_ceiling_grip():
-	self.powers['ceiling_grip'] = true
+func add_power(powerup):
+	self.powers[powerup] = true
 
-func remove_ceiling_grip():
-	self.powers['ceiling_grip'] = false
+func remove_power(powerup: String):
+	self.powers[powerup] = false
