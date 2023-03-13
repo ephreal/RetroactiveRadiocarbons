@@ -1,5 +1,6 @@
 extends CharacterBody2D
-var WALK_SPEED = 200
+var WALK_SPEED = 250
+var JUMP_SPEED = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,8 +18,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		
-	if Input.is_action_just_pressed("jump"):
-		velocity.y -= WALK_SPEED
+	if Input.is_action_just_pressed("jump") and self.is_on_floor():
+		velocity.y -= JUMP_SPEED
 
 	# "move_and_slide" already takes delta time into account.
 	self.move_and_slide()

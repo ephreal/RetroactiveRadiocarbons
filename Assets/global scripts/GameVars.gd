@@ -1,4 +1,4 @@
 extends Node
 
 # Global Game Variables
-const GRAVITY = 200
+const GRAVITY = 600
