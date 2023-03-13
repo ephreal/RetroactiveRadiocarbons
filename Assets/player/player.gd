@@ -2,6 +2,7 @@ extends CharacterBody2D
 var WALK_SPEED = 250
 var JUMP_SPEED = 300
 var JUMP_FRAMES = 5
+var DOUBLE_JUMPED = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,7 +28,9 @@ func _physics_process(delta):
 
 func check_jumping():
 	if self.can_jump() and Input.is_action_just_pressed("jump"):
-		velocity.y -= self.JUMP_SPEED
+		velocity.y = -1 * self.JUMP_SPEED
+		if not (self.is_on_ceiling() and self.is_on_floor()) and self.JUMP_FRAMES <= 0:
+			self.DOUBLE_JUMPED = true
 	elif (Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_down")) and self.is_on_ceiling():
 		velocity.y += self.JUMP_SPEED / 2
 	elif self.is_on_ceiling() and Player.powers["ceiling_grip"]:
@@ -39,10 +42,17 @@ func check_jumping():
 func can_jump():
 	if self.is_on_floor():
 		self.JUMP_FRAMES = 5
+		self.DOUBLE_JUMPED = false
 		return true
 	
+	if Player.powers['double_jump'] and not self.is_on_floor() and self.JUMP_FRAMES <= 0:
+		if not self.DOUBLE_JUMPED:
+			return true
+
 	self.JUMP_FRAMES -= 1
 	
 	if self.JUMP_FRAMES > 0:
 		return true
+	
+	return false
 	

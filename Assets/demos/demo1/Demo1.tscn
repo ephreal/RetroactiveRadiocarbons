@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c523l52541v7f"]
+[gd_scene load_steps=10 format=3 uid="uid://c523l52541v7f"]
 
 [ext_resource type="Script" path="res://Assets/demos/demo1/Demo1.gd" id="1_jgopy"]
 [ext_resource type="PackedScene" uid="uid://c3in8uta8xsie" path="res://Assets/player/player.tscn" id="2_bqfnd"]
 [ext_resource type="PackedScene" uid="uid://c226r2qamwmnj" path="res://Assets/tilesets/platforms.tscn" id="3_snsn1"]
 [ext_resource type="Texture2D" uid="uid://dce5ssgw3x6mf" path="res://Assets/tilesets/Grassy Hills.png" id="4_7c454"]
 [ext_resource type="PackedScene" uid="uid://ccob3moyyatgu" path="res://Assets/sprites/powerups/grip powerup/Grip Powerup.tscn" id="5_q80iy"]
+[ext_resource type="PackedScene" uid="uid://dmsig8iiuvy6g" path="res://Assets/sprites/powerups/jump powerup/Jump Powerup.tscn" id="6_broxu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d47sg"]
 
@@ -180,3 +181,6 @@ layer_0/tile_data = PackedInt32Array(65536, 131072, 1, 131072, 131072, 1, 196608
 
 [node name="Grip Powerup" parent="." instance=ExtResource("5_q80iy")]
 position = Vector2(158, 174)
+
+[node name="Jump Powerup" parent="." instance=ExtResource("6_broxu")]
+position = Vector2(1057, 559)
