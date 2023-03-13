@@ -19,7 +19,9 @@ func _physics_process(delta):
 		velocity.x = 0
 		
 	if Input.is_action_just_pressed("jump") and self.is_on_floor():
-		velocity.y -= JUMP_SPEED
+		velocity.y -= self.JUMP_SPEED
+	elif (Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_down")) and self.is_on_ceiling():
+		velocity.y += self.JUMP_SPEED / 2
 	elif self.is_on_ceiling() and Player.powers["ceiling_grip"]:
 		velocity.y = 0
 	elif self.is_on_ceiling():
