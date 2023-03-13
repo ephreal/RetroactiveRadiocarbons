@@ -21,3 +21,9 @@ func play(music: String):
 	music_player.stop()
 	music_player.stream = load(music)
 	music_player.play()
+
+
+func play_sfx(sfx: String):
+	sfx = sfx_path % sfx
+	sfx_player.stream = load(sfx)
+	sfx_player.play()

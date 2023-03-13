@@ -20,9 +20,10 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("jump") and self.is_on_floor():
 		velocity.y -= JUMP_SPEED
-	
-	if self.is_on_ceiling():
+	elif self.is_on_ceiling() and Player.powers["ceiling_grip"]:
 		velocity.y = 0
+	elif self.is_on_ceiling():
+		velocity.y = 1
 
 	# "move_and_slide" already takes delta time into account.
 	self.move_and_slide()

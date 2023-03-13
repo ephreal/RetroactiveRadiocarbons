@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 Audio="*res://Assets/global scripts/Audio.gd"
 Settings="*res://Assets/global scripts/Settings.gd"
 GameVars="*res://Assets/global scripts/GameVars.gd"
+Player="*res://Assets/global scripts/Player.gd"
 
 [display]
 
