@@ -24,6 +24,7 @@ Player="*res://Assets/global scripts/Player.gd"
 [display]
 
 window/size/viewport_height=640
+window/stretch/mode="viewport"
 
 [input]
 

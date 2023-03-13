@@ -3,10 +3,11 @@ var WALK_SPEED = 250
 var JUMP_SPEED = 300
 var JUMP_FRAMES = 5
 var DOUBLE_JUMPED = false
+var camera
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	self.camera = self.get_node("camera")
 
 
 func _physics_process(delta):
@@ -55,4 +56,7 @@ func can_jump():
 		return true
 	
 	return false
-	
+
+
+func set_camera_end(end: int):
+	self.camera.limit_right = end
