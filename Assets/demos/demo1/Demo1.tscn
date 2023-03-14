@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c523l52541v7f"]
+[gd_scene load_steps=16 format=3 uid="uid://c523l52541v7f"]
 
 [ext_resource type="Script" path="res://Assets/demos/demo1/Demo1.gd" id="1_jgopy"]
 [ext_resource type="PackedScene" uid="uid://c3in8uta8xsie" path="res://Assets/player/player.tscn" id="2_bqfnd"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccob3moyyatgu" path="res://Assets/sprites/powerups/grip powerup/Grip Powerup.tscn" id="5_q80iy"]
 [ext_resource type="PackedScene" uid="uid://dmsig8iiuvy6g" path="res://Assets/sprites/powerups/jump powerup/Jump Powerup.tscn" id="6_broxu"]
 [ext_resource type="PackedScene" uid="uid://3xnbr71qau06" path="res://Assets/tilesets/bricks.tscn" id="7_8lr4e"]
+[ext_resource type="PackedScene" uid="uid://bliuxa04o0f1" path="res://Assets/sprites/powerups/speed powerup/Speed Powerup.tscn" id="7_rs7wo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d47sg"]
 
@@ -235,6 +236,9 @@ position = Vector2(158, 174)
 
 [node name="Jump Powerup" parent="." instance=ExtResource("6_broxu")]
 position = Vector2(1057, 559)
+
+[node name="Speed Powerup" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(2034, 558)
 
 [node name="HiddenArea" type="Area2D" parent="."]
 script = SubResource("GDScript_c4kfd")

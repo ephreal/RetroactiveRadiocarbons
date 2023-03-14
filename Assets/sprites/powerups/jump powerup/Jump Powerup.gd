@@ -12,7 +12,7 @@ func _process(_delta):
 
 
 func _on_body_entered(_body):
-	# Adds the ceiling grip power to the player
+	# Adds the double jump power to the player
 	# Removes the coin from the game.
 	Audio.play_sfx("Pickup Coin.ogg")
 	Player.add_power("double_jump")

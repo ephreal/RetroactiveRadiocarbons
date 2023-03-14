@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bliuxa04o0f1"]
+
+[ext_resource type="Script" path="res://Assets/sprites/powerups/speed powerup/Speed Powerup.gd" id="1_rlet8"]
+[ext_resource type="Texture2D" uid="uid://d25likkscjk28" path="res://Assets/images/powerups/speed_powerup.png" id="2_tmakb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8xm5b"]
+radius = 11.0
+height = 32.0
+
+[node name="Speed Powerup" type="Area2D"]
+script = ExtResource("1_rlet8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tmakb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8xm5b")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

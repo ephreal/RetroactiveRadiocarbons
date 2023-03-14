@@ -1,6 +1,4 @@
 extends CharacterBody2D
-var WALK_SPEED = 250
-var JUMP_SPEED = 300
 var JUMP_FRAMES = 5
 var DOUBLE_JUMPED = false
 var camera
@@ -15,9 +13,9 @@ func _physics_process(delta):
 	velocity.y += delta * GameVars.GRAVITY
 
 	if Input.is_action_pressed("ui_left"):
-		velocity.x = -WALK_SPEED
+		velocity.x = -GameVars.WALK_SPEED
 	elif Input.is_action_pressed("ui_right"):
-		velocity.x =  WALK_SPEED
+		velocity.x =  GameVars.WALK_SPEED
 	else:
 		velocity.x = 0
 	
@@ -29,11 +27,12 @@ func _physics_process(delta):
 
 func check_jumping():
 	if self.can_jump() and Input.is_action_just_pressed("jump"):
-		velocity.y = -1 * self.JUMP_SPEED
+		velocity.y = -1 * GameVars.JUMP_SPEED
 		if not (self.is_on_ceiling() and self.is_on_floor()) and self.JUMP_FRAMES <= 0:
 			self.DOUBLE_JUMPED = true
+			velocity.y = -0.9 * GameVars.JUMP_SPEED
 	elif (Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_down")) and self.is_on_ceiling():
-		velocity.y += self.JUMP_SPEED / 2.0
+		velocity.y += GameVars.JUMP_SPEED / 2.0
 	elif self.is_on_ceiling() and Player.powers["ceiling_grip"]:
 		velocity.y = 0
 	elif self.is_on_ceiling():
