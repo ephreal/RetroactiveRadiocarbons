@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c523l52541v7f"]
+[gd_scene load_steps=15 format=3 uid="uid://c523l52541v7f"]
 
 [ext_resource type="Script" path="res://Assets/demos/demo1/Demo1.gd" id="1_jgopy"]
 [ext_resource type="PackedScene" uid="uid://c3in8uta8xsie" path="res://Assets/player/player.tscn" id="2_bqfnd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dce5ssgw3x6mf" path="res://Assets/tilesets/Grassy Hills.png" id="4_7c454"]
 [ext_resource type="PackedScene" uid="uid://ccob3moyyatgu" path="res://Assets/sprites/powerups/grip powerup/Grip Powerup.tscn" id="5_q80iy"]
 [ext_resource type="PackedScene" uid="uid://dmsig8iiuvy6g" path="res://Assets/sprites/powerups/jump powerup/Jump Powerup.tscn" id="6_broxu"]
+[ext_resource type="PackedScene" uid="uid://3xnbr71qau06" path="res://Assets/tilesets/bricks.tscn" id="7_8lr4e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d47sg"]
 
@@ -209,112 +210,6 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_ud3le")
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_85fti"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_83ef2"]
-texture = ExtResource("4_7c454")
-texture_region_size = Vector2i(64, 64)
-6:1/0 = 0
-6:1/0/terrain_set = 0
-6:1/0/terrain = 0
-6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-6:1/0/physics_layer_0/angular_velocity = 0.0
-6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-7:1/0 = 0
-7:1/0/terrain_set = 0
-7:1/0/terrain = 0
-7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:1/0/physics_layer_0/angular_velocity = 0.0
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-7:1/0/terrains_peering_bit/bottom_side = 0
-6:2/0 = 0
-6:2/0/terrain_set = 0
-6:2/0/terrain = 0
-6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-6:2/0/physics_layer_0/angular_velocity = 0.0
-6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-6:2/0/terrains_peering_bit/top_side = 0
-7:2/0 = 0
-7:2/0/terrain_set = 0
-7:2/0/terrain = 0
-7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:2/0/physics_layer_0/angular_velocity = 0.0
-7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-7:2/0/terrains_peering_bit/bottom_side = 0
-7:2/0/terrains_peering_bit/top_side = 0
-5:3/next_alternative_id = 3
-5:3/0 = 0
-5:3/0/terrain_set = 0
-5:3/0/terrain = 0
-5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:3/0/physics_layer_0/angular_velocity = 0.0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-5:3/0/terrains_peering_bit/right_side = 0
-5:3/1 = 1
-5:3/1/terrain_set = 0
-5:3/1/terrain = 0
-5:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:3/1/physics_layer_0/angular_velocity = 0.0
-5:3/1/terrains_peering_bit/right_side = 0
-5:3/1/terrains_peering_bit/bottom_side = 0
-5:3/1/terrains_peering_bit/top_side = 0
-5:3/2 = 2
-5:3/2/terrain_set = 0
-5:3/2/terrain = 0
-5:3/2/physics_layer_0/linear_velocity = Vector2(0, 0)
-5:3/2/physics_layer_0/angular_velocity = 0.0
-5:3/2/terrains_peering_bit/right_side = 0
-5:3/2/terrains_peering_bit/top_side = 0
-6:3/0 = 0
-6:3/0/terrain_set = 0
-6:3/0/terrain = 0
-6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-6:3/0/physics_layer_0/angular_velocity = 0.0
-6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-6:3/0/terrains_peering_bit/right_side = 0
-6:3/0/terrains_peering_bit/left_side = 0
-7:3/next_alternative_id = 3
-7:3/0 = 0
-7:3/0/terrain_set = 0
-7:3/0/terrain = 0
-7:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:3/0/physics_layer_0/angular_velocity = 0.0
-7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-7:3/0/terrains_peering_bit/left_side = 0
-7:3/1 = 1
-7:3/1/terrain_set = 0
-7:3/1/terrain = 0
-7:3/1/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:3/1/physics_layer_0/angular_velocity = 0.0
-7:3/1/terrains_peering_bit/bottom_side = 0
-7:3/1/terrains_peering_bit/left_side = 0
-7:3/1/terrains_peering_bit/top_side = 0
-7:3/2 = 2
-7:3/2/terrain_set = 0
-7:3/2/terrain = 0
-7:3/2/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:3/2/physics_layer_0/angular_velocity = 0.0
-7:3/2/terrains_peering_bit/left_side = 0
-7:3/2/terrains_peering_bit/top_side = 0
-7:4/0 = 0
-7:4/0/terrain_set = 0
-7:4/0/terrain = 0
-7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-7:4/0/physics_layer_0/angular_velocity = 0.0
-7:4/0/terrains_peering_bit/right_side = 0
-7:4/0/terrains_peering_bit/bottom_side = 0
-7:4/0/terrains_peering_bit/left_side = 0
-7:4/0/terrains_peering_bit/top_side = 0
-
-[sub_resource type="TileSet" id="TileSet_v7lfj"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_85fti")
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Solid Walls"
-terrain_set_0/terrain_0/color = Color(0, 0, 0, 1)
-sources/0 = SubResource("TileSetAtlasSource_83ef2")
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jgopy")
 
@@ -353,10 +248,8 @@ tile_set = SubResource("TileSet_0jnui")
 format = 2
 layer_0/tile_data = PackedInt32Array(393246, 0, 0, 393247, 65536, 0, 393248, 131072, 0, 458784, 131072, 1, 524320, 131072, 1, 589856, 131072, 1, 589855, 65536, 2, 589854, 65536, 2, 458782, 0, 1, 524318, 65536, 1, 524319, 65536, 1, 458783, 65536, 1)
 
-[node name="Bricks" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_v7lfj")
-format = 2
-layer_0/tile_data = PackedInt32Array(131089, 458752, 1, 196625, 327680, 65539, 262161, 393216, 2, 196626, 393216, 3, 131091, 458752, 1, 196627, 458752, 65539, 262163, 393216, 2, 131093, 327680, 3, 131094, 458752, 4, 131095, 458752, 3, 196630, 458752, 2, 262165, 327680, 3, 262166, 458752, 4, 262167, 458752, 3)
+[node name="Bricks" parent="." instance=ExtResource("7_8lr4e")]
+layer_0/tile_data = PackedInt32Array(65557, 458752, 1, 131093, 458752, 2, 196629, 393216, 5, 196630, 393216, 6, 196631, 458752, 6, 196628, 393216, 6, 196627, 327680, 6)
 
 [connection signal="body_entered" from="HiddenArea" to="." method="_on_hidden_area_body_entered"]
 [connection signal="body_exited" from="HiddenArea" to="." method="_on_hidden_area_body_exited"]
