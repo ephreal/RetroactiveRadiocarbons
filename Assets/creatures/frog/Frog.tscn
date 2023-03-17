@@ -1,23 +1,35 @@
-[gd_scene load_steps=13 format=3 uid="uid://bjej7e63qt2m1"]
+[gd_scene load_steps=19 format=3 uid="uid://bjej7e63qt2m1"]
 
 [ext_resource type="Texture2D" uid="uid://v0235wg220pg" path="res://Assets/images/creatures/frog.png" id="1_ktq6a"]
 [ext_resource type="Script" path="res://Assets/creatures/frog/Frog.gd" id="1_wk5vv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p8ltr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ouwb"]
 atlas = ExtResource("1_ktq6a")
 region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jtrvg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qw8a"]
 atlas = ExtResource("1_ktq6a")
-region = Rect2(64, 64, 64, 64)
+region = Rect2(192, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2lsn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k37o"]
 atlas = ExtResource("1_ktq6a")
 region = Rect2(128, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xgrkl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar1sx"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uy6d"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu6tw"]
 atlas = ExtResource("1_ktq6a")
 region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ln5"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0oyl8"]
 atlas = ExtResource("1_ktq6a")
@@ -35,24 +47,45 @@ region = Rect2(128, 0, 64, 64)
 atlas = ExtResource("1_ktq6a")
 region = Rect2(192, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mri80"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26uxs"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiwxo"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(0, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3vqoq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p8ltr")
+"texture": SubResource("AtlasTexture_0ouwb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jtrvg")
+"texture": SubResource("AtlasTexture_4qw8a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w2lsn")
+"texture": SubResource("AtlasTexture_6k37o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xgrkl")
+"texture": SubResource("AtlasTexture_ar1sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uy6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu6tw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8ln5")
 }],
 "loop": true,
 "name": &"Blink",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -66,26 +99,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8e8qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mri80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26uxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiwxo")
 }],
 "loop": true,
 "name": &"Hop",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_am2u3"]
 radius = 17.0
 height = 62.0
 
-[node name="Frog" type="Node2D"]
+[node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_wk5vv")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3vqoq")
 animation = &"Blink"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_am2u3")
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

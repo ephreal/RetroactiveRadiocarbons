@@ -293,7 +293,7 @@ shape = SubResource("RectangleShape2D_nurko")
 layer_0/tile_data = PackedInt32Array(524328, 0, 1)
 
 [node name="Frog" parent="." instance=ExtResource("11_855bp")]
-position = Vector2(2716, 298)
+position = Vector2(2716, 296)
 
 [node name="Respawn Area2" parent="." instance=ExtResource("9_evrjd")]
 position = Vector2(11947, 512)
