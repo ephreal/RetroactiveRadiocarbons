@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://lreukgiixdbl"]
+[gd_scene load_steps=7 format=3 uid="uid://lreukgiixdbl"]
 
 [ext_resource type="Script" path="res://Assets/menus/title/Title.gd" id="1_46i56"]
 [ext_resource type="PackedScene" uid="uid://bkaec3mva3rc0" path="res://Assets/tilesets/platforms.tscn" id="1_rfh0n"]
 [ext_resource type="PackedScene" uid="uid://dv3s04k6hiyfm" path="res://Assets/characters/nyaa-chan/Nyaa-Chan.tscn" id="2_6dlh7"]
 [ext_resource type="PackedScene" uid="uid://3xnbr71qau06" path="res://Assets/tilesets/bricks.tscn" id="2_s7vt4"]
 [ext_resource type="PackedScene" uid="uid://dmsig8iiuvy6g" path="res://Assets/sprites/powerups/jump powerup/Jump Powerup.tscn" id="5_4nppa"]
+[ext_resource type="PackedScene" uid="uid://bjej7e63qt2m1" path="res://Assets/creatures/frog/Frog.tscn" id="6_4c53o"]
 
 [node name="Title" type="CanvasLayer"]
 script = ExtResource("1_46i56")
@@ -18,7 +19,7 @@ color = Color(0.0313726, 0.419608, 0.588235, 1)
 layer_0/tile_data = PackedInt32Array(589824, 327680, 5, 524288, 327680, 4, 458752, 327680, 4, 393216, 458752, 2, 327680, 458752, 2, 262144, 458752, 2, 196608, 458752, 2, 131072, 458752, 2, 65536, 458752, 2, 0, 327680, 3, 1, 393216, 6, 2, 393216, 6, 3, 393216, 6, 4, 393216, 6, 5, 393216, 6, 6, 393216, 6, 7, 393216, 6, 8, 393216, 6, 9, 393216, 6, 10, 393216, 6, 11, 393216, 6, 12, 393216, 6, 13, 393216, 6, 14, 393216, 6, 15, 393216, 6, 16, 393216, 6, 17, 458752, 3, 65553, 458752, 2, 131089, 458752, 2, 196625, 458752, 2, 262161, 458752, 2, 327697, 458752, 2, 393233, 458752, 2, 458769, 458752, 4, 524305, 458752, 4, 589841, 458752, 5, 458753, 458752, 3, 524289, 393216, 4, 524290, 458752, 3, 589826, 393216, 5, 589825, 393216, 5, 458768, 327680, 3, 524304, 393216, 4, 589840, 393216, 5, 589839, 393216, 5, 524303, 327680, 3, 589838, 327680, 6, 589827, 458752, 6)
 
 [node name="Platforms" parent="." instance=ExtResource("1_rfh0n")]
-layer_0/tile_data = PackedInt32Array(589828, 65537, 0, 589829, 65537, 2, 589830, 65537, 2, 589831, 65537, 2, 589832, 65537, 2, 589833, 65537, 2, 589834, 65537, 2, 589835, 65537, 2, 589836, 65537, 2, 589837, 65537, 0, 458758, 327681, 0, 458763, 327681, 0, 393223, 1, 3, 393224, 65537, 3, 393225, 65537, 3, 393226, 131073, 3, 524294, 65537, 1, 524295, 65537, 0, 524296, 65537, 0, 524297, 65537, 0, 524298, 65537, 0, 524299, 65537, 1, 524293, 1, 0, 524300, 131073, 0)
+layer_0/tile_data = PackedInt32Array(589828, 65537, 0, 589829, 65537, 2, 589830, 65537, 2, 589831, 65537, 3, 589832, 65537, 3, 589833, 65537, 3, 589834, 65537, 3, 589835, 65537, 2, 589836, 65537, 2, 589837, 65537, 0, 458758, 327681, 0, 458763, 327681, 0, 393223, 1, 3, 393224, 65537, 3, 393225, 65537, 3, 393226, 131073, 3, 524294, 131073, 1, 524299, 1, 1, 524293, 1, 0, 524300, 131073, 0)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 448.0
@@ -51,3 +52,9 @@ position = Vector2(287, 559)
 
 [node name="Jump Powerup2" parent="." instance=ExtResource("5_4nppa")]
 position = Vector2(863, 558)
+
+[node name="Frog" parent="." instance=ExtResource("6_4c53o")]
+position = Vector2(483, 552)
+
+[node name="Frog2" parent="." instance=ExtResource("6_4c53o")]
+position = Vector2(663, 551)
