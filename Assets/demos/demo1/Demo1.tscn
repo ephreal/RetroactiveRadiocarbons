@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://3xnbr71qau06" path="res://Assets/tilesets/bricks.tscn" id="7_8lr4e"]
 [ext_resource type="PackedScene" uid="uid://bliuxa04o0f1" path="res://Assets/sprites/powerups/speed powerup/Speed Powerup.tscn" id="7_rs7wo"]
 [ext_resource type="PackedScene" uid="uid://dwsv8xponub4" path="res://Assets/areas/respawn area/Respawn Area.tscn" id="9_evrjd"]
-[ext_resource type="PackedScene" uid="uid://dv3s04k6hiyfm" path="res://Assets/characters/nyaa-chan/Nyaa-Chan.tscn" id="10_qkk7t"]
 [ext_resource type="PackedScene" uid="uid://27mgcpv0nsgv" path="res://Assets/areas/hidden area/Hidden Area.tscn" id="10_wd1ix"]
 [ext_resource type="PackedScene" uid="uid://bjej7e63qt2m1" path="res://Assets/creatures/frog/Frog.tscn" id="11_855bp"]
+[ext_resource type="PackedScene" uid="uid://df4pkrayslnkn" path="res://Assets/characters/genessa/Genessa.tscn" id="11_qxrt2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d47sg"]
 
@@ -299,56 +299,140 @@ position = Vector2(2716, 298)
 position = Vector2(11947, 512)
 scale = Vector2(2, 6)
 
+[node name="Speed Powerup2" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(7392, 430)
+
+[node name="Speed Powerup3" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(10911, 559)
+
+[node name="Speed Powerup4" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(10976, 559)
+
+[node name="Speed Powerup5" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11232, 559)
+
+[node name="Speed Powerup6" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11486, 559)
+
+[node name="Speed Powerup7" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11551, 559)
+
+[node name="Speed Powerup8" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(10976, 495)
+
+[node name="Speed Powerup9" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11040, 495)
+
+[node name="Speed Powerup10" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11103, 495)
+
+[node name="Speed Powerup11" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11166, 495)
+
+[node name="Speed Powerup12" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11232, 495)
+
+[node name="Speed Powerup13" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11295, 495)
+
+[node name="Speed Powerup14" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11359, 495)
+
+[node name="Speed Powerup15" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11424, 495)
+
+[node name="Speed Powerup16" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11486, 495)
+
+[node name="Speed Powerup17" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11040, 431)
+
+[node name="Speed Powerup18" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11103, 431)
+
+[node name="Speed Powerup19" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11232, 431)
+
+[node name="Speed Powerup20" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11295, 431)
+
+[node name="Speed Powerup21" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11359, 431)
+
+[node name="Speed Powerup22" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11424, 431)
+
+[node name="Speed Powerup23" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11103, 367)
+
+[node name="Speed Powerup24" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11168, 367)
+
+[node name="Speed Powerup25" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11232, 367)
+
+[node name="Speed Powerup26" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11295, 367)
+
+[node name="Speed Powerup27" parent="." instance=ExtResource("7_rs7wo")]
+position = Vector2(11359, 367)
+
 [node name="Hidden Area2" parent="." instance=ExtResource("10_wd1ix")]
 
 [node name="Bricks" parent="Hidden Area2" instance=ExtResource("7_8lr4e")]
 layer_0/tile_data = PackedInt32Array(262318, 393217, 3, 262319, 393217, 3, 262320, 393217, 3, 327854, 393217, 4, 327853, 393217, 4, 393389, 393217, 4, 458925, 393217, 4, 393388, 393217, 4, 458924, 393217, 4, 458926, 393217, 4, 458927, 393217, 4, 458928, 393217, 4, 458929, 393217, 4, 458930, 393217, 4, 458931, 393217, 4, 524467, 393217, 4, 524468, 393217, 4, 393393, 393217, 4, 327857, 393217, 4, 393394, 393217, 4, 393392, 393217, 4, 524462, 393217, 4, 524463, 393217, 4, 524464, 393217, 4, 393391, 393217, 4, 327855, 393217, 4, 393390, 393217, 4, 524461, 393217, 4, 524460, 393217, 4, 458923, 393217, 4, 524459, 393217, 4, 524458, 393217, 4, 458922, 393217, 4, 262316, 327681, 3, 262317, 393217, 3, 262321, 393217, 3, 262322, 458753, 3, 327858, 393217, 4, 327852, 393217, 4, 327851, 327681, 3, 327859, 458753, 3, 393396, 458753, 3, 393395, 393217, 4, 393387, 393217, 4, 393386, 327681, 3, 458921, 327681, 3, 458932, 393217, 4, 458933, 458753, 3, 524470, 458753, 3, 524469, 393217, 4, 524466, 393217, 4, 524465, 393217, 4, 524457, 393217, 4, 524456, 327681, 3, 589991, 327681, 6, 589992, 393217, 5, 589993, 393217, 5, 589994, 393217, 5, 589995, 393217, 5, 589996, 393217, 5, 589997, 393217, 5, 589998, 393217, 5, 589999, 393217, 5, 590000, 393217, 5, 590001, 393217, 5, 590002, 393217, 5, 590003, 393217, 5, 590004, 393217, 5, 590005, 393217, 5, 590006, 393217, 5, 590007, 393217, 6, 590008, 393217, 6, 590009, 393217, 6, 590010, 458753, 6, 327856, 393217, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11232, 296)
 shape = SubResource("RectangleShape2D_amw6q")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11232, 352)
 shape = SubResource("RectangleShape2D_jxhey")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11072, 448)
 shape = SubResource("RectangleShape2D_hhwkj")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(10976, 511.5)
 shape = SubResource("RectangleShape2D_741mn")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11488, 512)
 shape = SubResource("RectangleShape2D_741mn")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(10912, 543.5)
 shape = SubResource("RectangleShape2D_cj17g")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11168, 480)
 shape = SubResource("RectangleShape2D_cj17g")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11551, 544)
 shape = SubResource("RectangleShape2D_cj17g")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11232.5, 479)
 shape = SubResource("RectangleShape2D_idlws")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Hidden Area2"]
+visible = false
 position = Vector2(11359.5, 448)
 shape = SubResource("RectangleShape2D_sfu87")
 
-[node name="Speed Powerup2" parent="." instance=ExtResource("7_rs7wo")]
-position = Vector2(7392, 430)
-
-[node name="Player" parent="." instance=ExtResource("10_qkk7t")]
-position = Vector2(11339.5, 456.992)
+[node name="Player" parent="." instance=ExtResource("11_qxrt2")]
 
 [connection signal="body_entered" from="HiddenArea" to="." method="_on_hidden_area_body_entered"]
 [connection signal="body_exited" from="HiddenArea" to="." method="_on_hidden_area_body_exited"]
