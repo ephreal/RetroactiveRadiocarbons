@@ -1,5 +1,5 @@
 extends Node2D
-var bg_music = "Character Select.ogg"
+var bg_music = "level1.ogg"
 var hidden_area
 var level_length = 2622
 var player

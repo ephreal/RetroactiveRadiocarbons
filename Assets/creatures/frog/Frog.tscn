@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://bjej7e63qt2m1"]
+
+[ext_resource type="Texture2D" uid="uid://v0235wg220pg" path="res://Assets/images/creatures/frog.png" id="1_ktq6a"]
+[ext_resource type="Script" path="res://Assets/creatures/frog/Frog.gd" id="1_wk5vv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8ltr"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtrvg"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2lsn"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgrkl"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oyl8"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb4vv"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrn1t"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e8qe"]
+atlas = ExtResource("1_ktq6a")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vqoq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8ltr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtrvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2lsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgrkl")
+}],
+"loop": true,
+"name": &"Blink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oyl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb4vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrn1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e8qe")
+}],
+"loop": true,
+"name": &"Hop",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_am2u3"]
+radius = 17.0
+height = 62.0
+
+[node name="Frog" type="Node2D"]
+script = ExtResource("1_wk5vv")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_3vqoq")
+animation = &"Blink"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_am2u3")

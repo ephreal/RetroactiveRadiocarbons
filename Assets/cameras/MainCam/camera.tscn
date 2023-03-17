@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqeiwktud020c"]
+
+[node name="camera" type="Camera2D"]
+limit_left = 0
+limit_top = 0
+limit_bottom = 640

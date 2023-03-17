@@ -6,6 +6,8 @@ var double_speed_timer
 var double_speed_duration = 20
 var player_object
 var player_sprite
+var JUMP_FRAMES = 5
+var DOUBLE_JUMPED
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -60,3 +62,36 @@ func activate_double_speed():
 func deactivate_double_speed():
 	self.remove_power("double_speed")
 	GameVars.set_player_speed(200)
+
+
+# Player Movement
+func check_jumping():
+	if self.can_jump() and Input.is_action_just_pressed("jump"):
+		player_object.velocity.y = -1 * GameVars.JUMP_SPEED
+		if not (player_object.is_on_ceiling() and player_object.is_on_floor()) and self.JUMP_FRAMES <= 0:
+			self.DOUBLE_JUMPED = true
+			player_object.velocity.y = -0.91 * GameVars.JUMP_SPEED
+	elif (Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_down")) and player_object.is_on_ceiling():
+		player_object.velocity.y += GameVars.JUMP_SPEED / 2.0
+	elif player_object.is_on_ceiling() and Player.powers["ceiling_grip"]:
+		player_object.velocity.y = 0
+	elif player_object.is_on_ceiling():
+		player_object.velocity.y = 1
+
+
+func can_jump():
+	if player_object.is_on_floor():
+		self.JUMP_FRAMES = 5
+		self.DOUBLE_JUMPED = false
+		return true
+	
+	if Player.powers['double_jump'] and not player_object.is_on_floor() and self.JUMP_FRAMES <= 0:
+		if not self.DOUBLE_JUMPED:
+			return true
+
+	self.JUMP_FRAMES -= 1
+	
+	if self.JUMP_FRAMES > 0:
+		return true
+	
+	return false

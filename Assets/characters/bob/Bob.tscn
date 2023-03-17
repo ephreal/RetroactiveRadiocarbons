@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu5a0v8rfgov4"]
+
+[ext_resource type="Script" path="res://Assets/characters/bob/Bob.gd" id="1_ve3q4"]
+[ext_resource type="Texture2D" uid="uid://cior000muhl" path="res://Assets/images/characters/bob.png" id="2_1awsa"]
+[ext_resource type="PackedScene" uid="uid://cqeiwktud020c" path="res://Assets/cameras/MainCam/camera.tscn" id="3_4q8nl"]
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 11.0
+height = 62.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ve3q4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1awsa")
+
+[node name="camera" parent="." instance=ExtResource("3_4q8nl")]

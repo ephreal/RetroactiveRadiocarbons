@@ -4,7 +4,7 @@ extends Node
 const GRAVITY = 600
 
 # Player variables that can be modified anywhere via scripts
-var WALK_SPEED = 250
+var WALK_SPEED = 300
 var JUMP_SPEED = 300
 
 var ACTIVE_LEVEL

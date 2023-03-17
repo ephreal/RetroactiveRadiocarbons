@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://df4pkrayslnkn"]
+
+[ext_resource type="Script" path="res://Assets/characters/genessa/Genessa.gd" id="1_cuomu"]
+[ext_resource type="Texture2D" uid="uid://dd2q2bepxkwve" path="res://Assets/images/characters/Genessa.png" id="3_52dfy"]
+[ext_resource type="PackedScene" uid="uid://cqeiwktud020c" path="res://Assets/cameras/MainCam/camera.tscn" id="3_ee24c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt032"]
+atlas = ExtResource("3_52dfy")
+region = Rect2(0, 138, 42, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg0qp"]
+atlas = ExtResource("3_52dfy")
+region = Rect2(42, 138, 42, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxkcg"]
+atlas = ExtResource("3_52dfy")
+region = Rect2(84, 138, 42, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpcek"]
+atlas = ExtResource("3_52dfy")
+region = Rect2(126, 138, 42, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6id2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt032")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg0qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxkcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpcek")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 11.0
+height = 60.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cuomu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y6id2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("1")
+
+[node name="camera" parent="." instance=ExtResource("3_ee24c")]
