@@ -30,7 +30,7 @@ func check_jumping():
 		velocity.y = -1 * GameVars.JUMP_SPEED
 		if not (self.is_on_ceiling() and self.is_on_floor()) and self.JUMP_FRAMES <= 0:
 			self.DOUBLE_JUMPED = true
-			velocity.y = -0.9 * GameVars.JUMP_SPEED
+			velocity.y = -0.91 * GameVars.JUMP_SPEED
 	elif (Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_down")) and self.is_on_ceiling():
 		velocity.y += GameVars.JUMP_SPEED / 2.0
 	elif self.is_on_ceiling() and Player.powers["ceiling_grip"]:

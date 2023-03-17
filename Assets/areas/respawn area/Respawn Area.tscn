@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwsv8xponub4"]
+
+[ext_resource type="Script" path="res://Assets/areas/respawn area/Respawn Area.gd" id="1_hlrn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpmpu"]
+
+[node name="Respawn Area" type="Area2D"]
+script = ExtResource("1_hlrn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cpmpu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

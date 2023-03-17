@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://3xnbr71qau06"]
 
-[ext_resource type="Texture2D" uid="uid://dce5ssgw3x6mf" path="res://Assets/tilesets/Grassy Hills.png" id="1_6h846"]
+[ext_resource type="Texture2D" uid="uid://dce5ssgw3x6mf" path="res://Assets/images/tilesets/Grassy Hills.png" id="1_6h846"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_85fti"]
 

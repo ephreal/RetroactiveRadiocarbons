@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dce5ssgw3x6mf"
-path="res://.godot/imported/Grassy Hills.png-3ae22495f48d06b8ebf8650ac3d0a784.ctex"
+path="res://.godot/imported/Grassy Hills.png-8ff9de319f221c56c8259b1365c06b63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesets/Grassy Hills.png"
-dest_files=["res://.godot/imported/Grassy Hills.png-3ae22495f48d06b8ebf8650ac3d0a784.ctex"]
+source_file="res://Assets/images/tilesets/Grassy Hills.png"
+dest_files=["res://.godot/imported/Grassy Hills.png-8ff9de319f221c56c8259b1365c06b63.ctex"]
 
 [params]
 

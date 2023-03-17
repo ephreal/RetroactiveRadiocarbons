@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://27mgcpv0nsgv"]
+
+[ext_resource type="Script" path="res://Assets/areas/hidden area/Hidden Area.gd" id="1_5opom"]
+
+[node name="Hidden Area" type="Area2D"]
+script = ExtResource("1_5opom")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

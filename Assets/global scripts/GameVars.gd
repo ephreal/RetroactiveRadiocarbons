@@ -7,6 +7,7 @@ const GRAVITY = 600
 var WALK_SPEED = 250
 var JUMP_SPEED = 300
 
+var ACTIVE_LEVEL
 
 
 
@@ -29,3 +30,7 @@ func set_player_speed(speed: int):
 		speed = 500
 	
 	self.WALK_SPEED = speed
+
+func register_active_level(level):
+	# Sets the passed in variable to be the active level.
+	self.ACTIVE_LEVEL = level
