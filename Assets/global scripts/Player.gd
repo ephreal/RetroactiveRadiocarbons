@@ -53,7 +53,7 @@ func activate_double_speed():
 	if not self.powers.has("double_speed") or not self.powers['double_speed']:
 		self.add_power("double_speed")
 		self.double_speed_timer.start(self.double_speed_duration)
-		GameVars.set_player_speed(400)
+		GameVars.set_player_speed(500)
 	else:
 		var current = self.double_speed_timer.time_left
 		self.double_speed_timer.stop()
@@ -61,7 +61,7 @@ func activate_double_speed():
 
 func deactivate_double_speed():
 	self.remove_power("double_speed")
-	GameVars.set_player_speed(200)
+	GameVars.set_player_speed(300)
 
 
 # Player Movement

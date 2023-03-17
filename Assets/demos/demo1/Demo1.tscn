@@ -434,6 +434,15 @@ shape = SubResource("RectangleShape2D_sfu87")
 
 [node name="Player" parent="." instance=ExtResource("11_qxrt2")]
 
+[node name="Frog2" parent="." instance=ExtResource("11_855bp")]
+position = Vector2(5999, 550)
+
+[node name="Frog3" parent="." instance=ExtResource("11_855bp")]
+position = Vector2(6420, 549)
+
+[node name="Frog4" parent="." instance=ExtResource("11_855bp")]
+position = Vector2(6197, 462)
+
 [connection signal="body_entered" from="HiddenArea" to="." method="_on_hidden_area_body_entered"]
 [connection signal="body_exited" from="HiddenArea" to="." method="_on_hidden_area_body_exited"]
 [connection signal="body_entered" from="Hidden Area" to="." method="_on_hidden_area_body_entered_extend_camera"]

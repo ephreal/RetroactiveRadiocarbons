@@ -22,7 +22,7 @@ var ACTIVE_LEVEL
 func set_player_speed(speed: int):
 	# Sets the player speed to the value entered.
 	# Min value = 100
-	# Max value = 500
+	# Max value = 600
 	
 	if speed < 100:
 		speed = 100
