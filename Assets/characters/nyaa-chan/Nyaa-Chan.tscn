@@ -1,15 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv3s04k6hiyfm"]
+[gd_scene load_steps=11 format=3 uid="uid://dv3s04k6hiyfm"]
 
-[ext_resource type="Script" path="res://Assets/characters/elzer/Elzer.gd" id="1_yp4e3"]
+[ext_resource type="Script" path="res://Assets/characters/nyaa-chan/Nyaa-Chan.gd" id="1_4mech"]
 [ext_resource type="Texture2D" uid="uid://bs0asnpyuq4g5" path="res://Assets/images/characters/Nyaa-Chan.png" id="2_ljr4m"]
 [ext_resource type="PackedScene" uid="uid://cqeiwktud020c" path="res://Assets/cameras/MainCam/camera.tscn" id="3_8dhtw"]
+[ext_resource type="Texture2D" uid="uid://bnogq0jcavxqd" path="res://Assets/images/characters/Nyaa-chan spritesheet.png" id="4_2ud8x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bngck"]
 radius = 25.0
 height = 62.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_x507l"]
+atlas = ExtResource("4_2ud8x")
+region = Rect2(0, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix7b6"]
+atlas = ExtResource("4_2ud8x")
+region = Rect2(66, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e51lf"]
+atlas = ExtResource("4_2ud8x")
+region = Rect2(132, 0, 66, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am3xp"]
+atlas = ExtResource("4_2ud8x")
+region = Rect2(198, 0, 66, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnug2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x507l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix7b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e51lf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am3xp")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_yp4e3")
+script = ExtResource("1_4mech")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ljr4m")
@@ -19,3 +56,9 @@ position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_bngck")
 
 [node name="camera" parent="." instance=ExtResource("3_8dhtw")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-4, 0)
+sprite_frames = SubResource("SpriteFrames_dnug2")
+animation = &"jump"
