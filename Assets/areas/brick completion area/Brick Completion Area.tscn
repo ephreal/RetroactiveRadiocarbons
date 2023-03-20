@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8fjpv26ym3ja"]
+
+[ext_resource type="PackedScene" uid="uid://3xnbr71qau06" path="res://Assets/tilesets/bricks.tscn" id="1_4fb2l"]
+[ext_resource type="Script" path="res://Assets/areas/brick completion area/Brick Completion Area.gd" id="1_5vxtg"]
+[ext_resource type="PackedScene" uid="uid://dpis72mxwj8m8" path="res://Assets/areas/exit area/Exit Area.tscn" id="2_sv7us"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aema2"]
+size = Vector2(20, 574)
+
+[node name="Brick Completion Area" type="Node2D"]
+script = ExtResource("1_5vxtg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.168627, 0.168627, 0.168627, 1)
+
+[node name="Bricks" parent="." instance=ExtResource("1_4fb2l")]
+layer_0/tile_data = PackedInt32Array(589824, 393216, 5, 589825, 393216, 6, 589826, 393216, 6, 589827, 393216, 6, 589828, 393216, 6, 589829, 393216, 6, 589830, 393216, 6, 589831, 393216, 6, 589832, 393216, 6, 589833, 393216, 6, 589834, 393216, 6, 589835, 393216, 6, 589836, 393216, 6, 589837, 393216, 6, 589838, 393216, 6, 589839, 393216, 6, 589840, 393216, 6, 589841, 458752, 5, 524305, 458752, 2, 458769, 458752, 4, 393233, 458752, 2, 327697, 458752, 2, 262161, 458752, 2, 196625, 458752, 2, 131089, 458752, 2, 65553, 458752, 2, 17, 458752, 1, 458768, 327680, 6)
+
+[node name="Time" type="HBoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 640.0
+alignment = 1
+
+[node name="Description" type="Label" parent="Time"]
+layout_mode = 2
+text = "Time:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Time"]
+layout_mode = 2
+text = "00:00"
+
+[node name="Exit Area" parent="." instance=ExtResource("2_sv7us")]
+position = Vector2(1038, 512)
+
+[node name="CompletionTimer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11, 287)
+shape = SubResource("RectangleShape2D_aema2")
+
+[connection signal="timeout" from="CompletionTimer" to="." method="_on_completion_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

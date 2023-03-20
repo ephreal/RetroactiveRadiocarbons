@@ -27,6 +27,7 @@ func _physics_process(delta):
 	self.move_and_slide()
 
 func blink():
+	self.velocity.x = 0
 	self.animation.play("Blink")
 
 

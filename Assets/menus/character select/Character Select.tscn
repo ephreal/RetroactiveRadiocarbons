@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1fmb6i8urhi2"]
+
+[ext_resource type="Texture2D" uid="uid://bs0asnpyuq4g5" path="res://Assets/images/characters/Nyaa-Chan.png" id="1_56xyf"]
+[ext_resource type="Script" path="res://Assets/menus/character select/Character Select.gd" id="1_vduv3"]
+[ext_resource type="Texture2D" uid="uid://dou6buafi77gb" path="res://Assets/images/characters/Genessa Standing.png" id="2_is7qr"]
+[ext_resource type="Texture2D" uid="uid://cprha71odajae" path="res://Assets/images/characters/Elzer.png" id="3_e6jyx"]
+
+[node name="Character Select" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+script = ExtResource("1_vduv3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1152, 640)
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.0313726, 0.419608, 0.588235, 1)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="NyaaSelect" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/NyaaSelect"]
+layout_mode = 2
+texture = ExtResource("1_56xyf")
+stretch_mode = 3
+
+[node name="NyaaSelect" type="Button" parent="GridContainer/NyaaSelect"]
+layout_mode = 2
+text = "Nyaa-Chan"
+
+[node name="GenessaSelect" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/GenessaSelect"]
+layout_mode = 2
+texture = ExtResource("2_is7qr")
+stretch_mode = 3
+
+[node name="GenessaSelect" type="Button" parent="GridContainer/GenessaSelect"]
+layout_mode = 2
+text = "Genessa"
+
+[node name="ElzerSelect" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/ElzerSelect"]
+layout_mode = 2
+texture = ExtResource("3_e6jyx")
+stretch_mode = 3
+
+[node name="ElzerSelect" type="Button" parent="GridContainer/ElzerSelect"]
+layout_mode = 2
+text = "Elzer"
+
+[connection signal="pressed" from="GridContainer/NyaaSelect/NyaaSelect" to="." method="_on_nyaa_select_pressed"]
+[connection signal="pressed" from="GridContainer/GenessaSelect/GenessaSelect" to="." method="_on_genessa_select_pressed"]
+[connection signal="pressed" from="GridContainer/ElzerSelect/ElzerSelect" to="." method="_on_elzer_select_pressed"]

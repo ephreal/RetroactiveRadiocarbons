@@ -58,3 +58,5 @@ position = Vector2(483, 552)
 
 [node name="Frog2" parent="." instance=ExtResource("6_4c53o")]
 position = Vector2(663, 551)
+
+[connection signal="pressed" from="Controls/StartGame" to="." method="_on_start_game_pressed"]

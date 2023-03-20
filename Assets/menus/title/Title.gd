@@ -12,3 +12,10 @@ func _ready():
 	self.player.set_camera_end(self.level_length)
 	Player.register_player(self.get_node("Player"))
 	GameVars.register_active_level(self)
+
+
+
+
+
+func _on_start_game_pressed():
+	GameVars.change_scene(GameVars.CHARACTER_SELECT)

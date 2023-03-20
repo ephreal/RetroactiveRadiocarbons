@@ -9,8 +9,28 @@ var JUMP_SPEED = 300
 
 var ACTIVE_LEVEL
 
+var CHARACTER_SELECT
+var TITLE
+var ROOT
+var TREE
+
+func _ready():
+	self.CHARACTER_SELECT = "res://Assets/menus/character select/Character Select.tscn"
+	self.TITLE = "res://Assets/menus/title/Title.tscn"
+	self.ROOT = self.get_tree().get_root()
+	self.TREE = self.get_tree()
 
 
+func change_scene(path: String):
+	# Changes the scene to the passed in path
+	var current = self.TREE.get_current_scene()
+	current.call_deferred("free")
+	self.ROOT.remove_child(current)
+	
+	var next = load(path)
+	next = next.instantiate()
+	self.ROOT.add_child(next)
+	self.TREE.set_current_scene(next)
 
 ####################
 # Variable Setters #
