@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bommdg0gsy36a"]
+
+[ext_resource type="Script" path="res://Assets/areas/player spawn/Player Spawn.gd" id="1_i7sr3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8jdg"]
+size = Vector2(64, 64)
+
+[node name="Player Spawn" type="Area2D"]
+script = ExtResource("1_i7sr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_c8jdg")

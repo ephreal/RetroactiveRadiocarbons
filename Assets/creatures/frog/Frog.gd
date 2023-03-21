@@ -13,12 +13,7 @@ func _ready():
 	self.rng.randomize()
 	self.choose_option()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	self.velocity.y += GameVars.GRAVITY
 	if self.is_on_wall():

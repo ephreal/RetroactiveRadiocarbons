@@ -26,5 +26,5 @@ func _on_hidden_area_body_exited(_body):
 	self.hidden_area.visible = true
 
 
-func _on_hidden_area_body_entered_extend_camera(body):
+func _on_hidden_area_body_entered_extend_camera(_body):
 	self.player.set_camera_end(self.get_node('Sky').size.x)

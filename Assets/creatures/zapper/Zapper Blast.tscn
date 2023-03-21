@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnieop4qkimi7"]
+
+[ext_resource type="Script" path="res://Assets/creatures/zapper/Zapper Blast.gd" id="1_k6kjb"]
+[ext_resource type="Texture2D" uid="uid://dga6pdfomb01m" path="res://Assets/images/creatures/zapper/zapper_blast.png" id="1_tgfpx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a45qx"]
+radius = 11.1304
+height = 22.2609
+
+[node name="Zapper Blast" type="CharacterBody2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_k6kjb")
+
+[node name="ZapperCollision" type="CollisionShape2D" parent="."]
+scale = Vector2(0.625, 1.4375)
+shape = SubResource("CapsuleShape2D_a45qx")
+
+[node name="ZapperSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_tgfpx")
+metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0

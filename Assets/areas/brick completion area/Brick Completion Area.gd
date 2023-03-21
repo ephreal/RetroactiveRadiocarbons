@@ -9,12 +9,7 @@ func _ready():
 	self.timer.start(1)
 	self.time_label = self.get_node("Time/Time")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	self.timer.stop()
 	var minutes = "00"
 	var seconds

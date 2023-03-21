@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://djjyatmd4spsu"]
+[gd_scene load_steps=9 format=3 uid="uid://djjyatmd4spsu"]
 
 [ext_resource type="PackedScene" uid="uid://3xnbr71qau06" path="res://Assets/tilesets/bricks.tscn" id="1_2v7gj"]
 [ext_resource type="Script" path="res://Assets/levels/level1/Level1.gd" id="1_towxq"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bliuxa04o0f1" path="res://Assets/sprites/powerups/speed powerup/Speed Powerup.tscn" id="5_tx83q"]
 [ext_resource type="PackedScene" uid="uid://bjej7e63qt2m1" path="res://Assets/creatures/frog/Frog.tscn" id="6_57anv"]
 [ext_resource type="PackedScene" uid="uid://c8fjpv26ym3ja" path="res://Assets/areas/brick completion area/Brick Completion Area.tscn" id="6_v8lh2"]
+[ext_resource type="PackedScene" uid="uid://dxf6nb6slpmyx" path="res://Assets/creatures/zapper/Zapper.tscn" id="7_ldv55"]
+[ext_resource type="PackedScene" uid="uid://bommdg0gsy36a" path="res://Assets/areas/player spawn/Player Spawn.tscn" id="8_eyceq"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_towxq")
@@ -34,3 +36,12 @@ position = Vector2(6218, 537)
 
 [node name="Brick Completion Area" parent="." instance=ExtResource("6_v8lh2")]
 position = Vector2(10176, 0)
+
+[node name="Zapper" parent="." instance=ExtResource("7_ldv55")]
+position = Vector2(4386, 354)
+
+[node name="Zapper2" parent="." instance=ExtResource("7_ldv55")]
+position = Vector2(506, 559)
+
+[node name="Player Spawn" parent="." instance=ExtResource("8_eyceq")]
+position = Vector2(140, 528)
