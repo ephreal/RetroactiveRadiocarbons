@@ -74,7 +74,7 @@ func near_player():
 func face_player(delta):
 	var direction = Player.player_object.global_position - self.global_position
 	var angle_to = $AnimatedSprite2D.transform.x.angle_to(direction)
-	$AnimatedSprite2D.rotate(sign(angle_to + 50) * min(delta * self.ROTATION_SPEED, abs(angle_to)))
+	$AnimatedSprite2D.rotate(sign(angle_to) * min(delta * self.ROTATION_SPEED, abs(angle_to)))
 
 func _physics_process(delta):
 	if self.near_player():

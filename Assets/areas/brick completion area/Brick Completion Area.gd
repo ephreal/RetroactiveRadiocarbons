@@ -14,10 +14,13 @@ func _on_area_2d_body_entered(_body):
 	var minutes = "00"
 	var seconds
 	if self.time > 60:
-		minutes = self.time % 60
-		seconds = self.time - (minutes * 60)
+		minutes = self.time / 60
+		seconds = self.time % 60
 	else:
 		seconds = self.time
+
+	if seconds < 10:
+		seconds = "0" + str(seconds)
 
 	self.time_label.text = str(minutes) + ":" + str(seconds)
 

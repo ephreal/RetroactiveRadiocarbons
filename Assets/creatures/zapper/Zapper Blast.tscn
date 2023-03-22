@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dga6pdfomb01m" path="res://Assets/images/creatures/zapper/zapper_blast.png" id="1_tgfpx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a45qx"]
-radius = 11.1304
-height = 22.2609
+radius = 22.2609
+height = 44.5217
 
 [node name="Zapper Blast" type="CharacterBody2D"]
 scale = Vector2(0.25, 0.25)
@@ -21,3 +21,5 @@ metadata/_edit_lock_ = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
